@@ -1,0 +1,29 @@
+{
+  "name": "operate-tabletag",
+  "version": "1.0.0",
+  "description": "Operate:sort, filter table maked html tag. Tthe td in table can include html tag(button, img...). The table css and style do not make changes.",
+  "main": "dist/operatetabletag.js",
+  "scripts": {
+    "build": "npx tsc src/operatetabletag.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cranpun/operate-tagtable.git"
+  },
+  "keywords": [
+    "javascript",
+    "table",
+    "sort",
+    "filter",
+    "tag"
+  ],
+  "author": "cranpun",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cranpun/operate-tagtable/issues"
+  },
+  "homepage": "https://github.com/cranpun/operate-tagtable#readme",
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  }
+}
