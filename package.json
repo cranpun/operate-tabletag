@@ -14,8 +14,7 @@
     "javascript",
     "table",
     "sort",
-    "filter",
-    "tag"
+    "filter"
   ],
   "author": "cranpun",
   "license": "Apache-2.0",
