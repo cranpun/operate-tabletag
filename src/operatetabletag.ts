@@ -3,17 +3,12 @@
 // *********************************************
 export type OperateTabletagCompare = "number" | "text";
 export type OperateTabletagOrder = "asc" | "desc";
-export function operateTabletag(tableselector: string, filterselector?: string | null, countselector?: string | null) {
-    new OperateTabletag(tableselector, filterselector, countselector);
-}
-
-
 
 // *********************************************
 // private
 // *********************************************
 function tdval(td: HTMLTableDataCellElement): string {
-    const val = td.getAttribute(OperateTabletag.zzztableval);
+    const val = td.getAttribute(OperateTabletag.operatetabletagval);
     if (val === null) {
         // 指定がなければtdの中身
         const ret = td.innerText.trim();
@@ -24,7 +19,7 @@ function tdval(td: HTMLTableDataCellElement): string {
     }
 }
 
-class OperateTabletag {
+export class OperateTabletag {
     private table: HTMLTableElement;
     private trs: HTMLTableRowElement[]; // クローンしたtr
     private ths: HTMLTableHeaderCellElement[];
@@ -35,8 +30,11 @@ class OperateTabletag {
     private nowfilter: HTMLInputElement | null;
     private nowcount: HTMLElement | null;
 
-    public static readonly zzztableval = "zzztableval";
-    public static readonly zzztablecompare = "zzztablecompare";
+    /**
+     * ソート時に参照する値
+     */
+    public static readonly operatetabletagval = "operatetabletagval";
+    public static readonly operatetabletagcompare = "operatetabletagcompare";
 
     constructor(tableselector: string, filterselector?: string | null, countselector?: string | null) {
         this.table = <HTMLTableElement>document.querySelector(tableselector);
@@ -160,7 +158,7 @@ class OperateTabletagCol {
         this.table = table;
         this.cidx = cidx;
         this.nowodr = "asc";
-        this.ccompare = <OperateTabletagCompare>th.getAttribute(OperateTabletag.zzztablecompare);
+        this.ccompare = <OperateTabletagCompare>th.getAttribute(OperateTabletag.operatetabletagcompare);
         //cidxの位置のデータを集計
         const coltds: {
             val: string,
