@@ -203,7 +203,7 @@ class OperateTabletagCol {
         th.addEventListener("click", () => this.order());
 
         // ソートのthスタイリング
-        th.classList.add("zzzth");
+        th.classList.add("operate-tabletag-th");
     }
 
     private comparetext(a: { val: string; ridx: number; }, b: { val: string; ridx: number; }): number {
