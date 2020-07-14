@@ -60,7 +60,7 @@ export class OperateTabletag {
         for (let i = 0; i < this.trs.length; i++) {
             // 行の取得
             const tr = this.trs[i];
-            // 行文字列の生成。この中に含まれるzzztabledataを全て抽出して結合
+            // 行文字列の生成。この中に含まれるoperatetabletagvalを全て抽出して結合
             const vals = tr.querySelectorAll("td");
             let str = "";
             for (let i = 0; i < vals.length; i++) {

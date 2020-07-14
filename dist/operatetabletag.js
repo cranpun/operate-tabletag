@@ -36,7 +36,7 @@ var OperateTabletag = /** @class */ (function () {
         for (var i = 0; i < this.trs.length; i++) {
             // 行の取得
             var tr = this.trs[i];
-            // 行文字列の生成。この中に含まれるzzztabledataを全て抽出して結合
+            // 行文字列の生成。この中に含まれるoperatetabletagvalを全て抽出して結合
             var vals = tr.querySelectorAll("td");
             var str = "";
             for (var i_1 = 0; i_1 < vals.length; i_1++) {
@@ -173,7 +173,7 @@ var OperateTabletagCol = /** @class */ (function () {
         // イベントハンドラの登録
         th.addEventListener("click", function () { return _this.order(); });
         // ソートのthスタイリング
-        th.classList.add("zzzth");
+        th.classList.add("operate-tabletag-th");
     }
     OperateTabletagCol.prototype.comparetext = function (a, b) {
         // 文字列比較＝単純比較
