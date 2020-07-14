@@ -2,7 +2,7 @@
   "name": "operate-tabletag",
   "version": "1.0.1",
   "description": "Operate:sort, filter table maked html tag. Tthe td in table can include html tag(button, img...). The table css and style do not make changes.",
-  "main": "src/operatetabletag.ts",
+  "main": "dist/operatetabletag.js",
   "scripts": {
     "build": "npx tsc"
   },
